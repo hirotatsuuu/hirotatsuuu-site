@@ -4,6 +4,7 @@
     class="uk-flex-top"
   >
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-1">
+      <button class="uk-modal-close-outside" type="button" uk-close></button>
       <h2 class="uk-modal-title">Welcome</h2>
       <div>
         ひろたつのさいとへようこそ！<br>
