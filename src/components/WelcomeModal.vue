@@ -11,8 +11,8 @@
       />
       <h2 class="uk-modal-title">Welcome</h2>
       <div>
-        ひろたつのさいとへようこそ！<br>
-        ぜひ楽しんで行って下さい！<br>
+        Thank you for coming my site.<br>
+        I hope you'll have a great time.<br>
       </div>
       <p class="uk-text-right">
         <button class="uk-button uk-button-default uk-modal-close">閉じる</button>
