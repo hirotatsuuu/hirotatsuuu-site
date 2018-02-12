@@ -189,7 +189,7 @@
       >
         <div class="uk-container">
           <div class="uk-text-center">
-            <h1 uk-parallax="opacity: 0,1; y: -200,0; scale: 2,1; viewport: 0.5;">SNS</h1>
+            <h1 uk-parallax="opacity: 0,1; y: -200,0; viewport: 0.5;">SNS</h1>
             <div
               class="uk-grid-small uk-child-width-expand@s uk-text-center"
               uk-grid
