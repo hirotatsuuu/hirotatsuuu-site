@@ -250,7 +250,7 @@
                   target="_blank"
                 >
                   <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up">
-                    <h3 class="uk-card-title">qitta</h3>
+                    <h3 class="uk-card-title">Qiita</h3>
                   </div>
                 </a>
               </div>
@@ -288,7 +288,7 @@
                   target="_blank"
                 >
                   <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-top-medium">
-                    <h3 class="uk-card-title">wantedly</h3>
+                    <h3 class="uk-card-title">Wantedly</h3>
                   </div>
                 </a>
               </div>

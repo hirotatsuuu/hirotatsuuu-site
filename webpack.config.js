@@ -4,11 +4,11 @@ var webpack = require('webpack')
 module.exports = {
   context: __dirname + '/src',
   entry: {
-    bundle: './app.js',
+    bundle: './app.js'
   },
   output: {
     path: __dirname + '/dist',
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -37,14 +37,14 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-            name: '[name].[ext]?[hash]'
-        },
+          name: '[name].[ext]?[hash]'
+        }
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader',
+          'css-loader'
         ]
       },
       {
@@ -52,7 +52,7 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          'sass-loader',
+          'sass-loader'
         ]
       }
     ]
@@ -73,7 +73,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map',
+  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -85,7 +85,7 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.LoaderOptionsPlugin({
-        minimize: true
+      minimize: true
     })
   ])
 }
