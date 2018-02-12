@@ -6,7 +6,7 @@
         uk-navbar
       >
         <div
-          class="uk-navbar-right"
+          class="uk-navbar-center"
           style="position: fixed; z-index: 980;"
         >
           <a
@@ -21,6 +21,7 @@
             >
           </a>
           <ul class="uk-navbar-nav">
+            <li style="width: 100px;"/>
             <li><a
               href="#home"
               uk-scroll>home</a></li>
