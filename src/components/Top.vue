@@ -21,7 +21,6 @@
             >
           </a>
           <ul class="uk-navbar-nav">
-            <li style="width: 100px;"/>
             <li><a
               href="#home"
               uk-scroll>home</a></li>
