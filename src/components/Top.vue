@@ -459,36 +459,31 @@ export default {
   bottom: 10vh;
   color: white;
 }
+.uk-section {
+  background-size: cover;
+}
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
-  max-height: 100vh;
 }
 .portrait2 {
   background-image: url("../images/portrait2.jpg");
-  max-height: 100vh;
 }
 .portrait3 {
   background-image: url("../images/portrait3.jpg");
-  max-height: 100vh;
 }
 .portrait4 {
   background-image: url("../images/portrait4.jpg");
-  max-height: 100vh;
 }
 .portrait5 {
   background-image: url("../images/portrait5.jpg");
-  max-height: 100vh;
 }
 .portrait6 {
   background-image: url("../images/portrait6.jpg");
-  max-height: 100vh;
 }
 .portrait7 {
   background-image: url("../images/portrait7.jpg");
-  max-height: 100vh;
 }
 .portrait8 {
   background-image: url("../images/portrait8.jpg");
-  max-height: 100vh;
 }
 </style>
