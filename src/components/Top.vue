@@ -1,6 +1,85 @@
 <template>
-  <div>
-    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar;">
+  <div class="uk-offcanvas-content">
+    <div
+      v-if="windowOuterWidth < 800"
+      uk-sticky="
+        sel-target: .uk-navbar-container;
+        cls-active: uk-navbar-sticky;
+        bottom: #transparent-sticky-navbar;"
+    >
+      <nav
+        class="uk-navbar-container"
+        uk-navbar
+      >
+        <div
+          class="uk-navbar-left"
+          style="position: fixed; z-index: 980;"
+        >
+          <a
+            class="uk-navbar-toggle"
+            href="#"
+            uk-toggle="target: #mobile-menu"
+          >
+            <span uk-navbar-toggle-icon />
+          </a>
+        </div>
+      </nav>
+      <div
+        id="mobile-menu"
+        uk-offcanvas="overlay: true;"
+      >
+        <div class="uk-offcanvas-bar">
+          <div>
+            <h4>
+              <a
+                class="uk-logo"
+                href="#home"
+                uk-scroll
+              >
+                <img
+                  src="../images/logo.png"
+                  alt="logo"
+                  style="width: 150px; height: 30px;"
+                >
+              </a>
+            </h4>
+            <ul class="uk-list uk-list-large">
+              <li><a
+                class="uk-logo"
+                href="#about"
+                uk-scroll>ABOUT</a></li>
+              <li><a
+                class="uk-logo"
+                href="#portfolio"
+                uk-scroll>PROTFOLIO</a></li>
+              <li><a
+                class="uk-logo"
+                href="#blog"
+                uk-scroll>BLOG</a></li>
+              <li><a
+                class="uk-logo"
+                href="#contact"
+                uk-scroll>CONTACT</a></li>
+              <li><a
+                class="uk-logo"
+                href="#sns"
+                uk-scroll>SNS</a></li>
+              <li><a
+                class="uk-logo"
+                href="#bottom"
+                uk-scroll>BOTTOM</a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div
+      v-else
+      uk-sticky="
+        sel-target: .uk-navbar-container;
+        cls-active: uk-navbar-sticky;
+        bottom: #transparent-sticky-navbar;"
+    >
       <nav
         class="uk-navbar-container uk-navbar-transparent"
         uk-navbar
@@ -46,7 +125,7 @@
         </div>
       </nav>
     </div>
-    <div class="uk-offcanvas-content">
+    <div>
       <div
         class="uk-section uk-height-viewport uk-background-cover portrait1"
         id="home"
@@ -360,7 +439,8 @@ export default {
   },
   data () {
     return {
-      message: ''
+      message: '',
+      windowOuterWidth: window.outerWidth
     }
   },
   mounted () {
