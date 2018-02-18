@@ -460,6 +460,8 @@ export default {
   color: white;
 }
 .uk-section {
+  width: 100vw;
+  height: 100vh;
   background-size: cover;
 }
 .portrait1 {
