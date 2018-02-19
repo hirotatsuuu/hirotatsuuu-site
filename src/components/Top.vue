@@ -129,6 +129,10 @@
       <div
         class="uk-section uk-height-viewport uk-background-cover portrait1"
         id="home"
+        style="
+          background-position:center top;
+          background-repeat:no-repeat;
+          background-size:cover;"
       >
         <div class="uk-container">
           <div
@@ -148,6 +152,10 @@
       <div
         class="uk-section uk-height-viewport uk-background-cover portrait2"
         id="about"
+        style="
+          background-position:center top;
+          background-repeat:no-repeat;
+          background-size:cover;"
       >
         <div class="uk-container">
           <div
@@ -458,9 +466,6 @@ export default {
   right: 10vw;
   bottom: 10vh;
   color: white;
-}
-.uk-section {
-  background-size: auto 100vh;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
