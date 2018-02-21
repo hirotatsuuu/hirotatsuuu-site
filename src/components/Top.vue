@@ -138,7 +138,7 @@
           >
             <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
               <h1 class="uk-heading-hero">
-                <span uk-parallax="opacity: 1,0; y: 0,-50; scale: 2,1; viewport: 0.2;">WELCOME TO HIROTATSU SITE</span>
+                <span uk-parallax="opacity: 1,0; y: 0,-50; scale: 2,1; viewport: 0.2;">WELCOME TO HIROTATSU SITE_v1</span>
               </h1>
             </div>
           </div>
@@ -452,6 +452,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.uk-offcanvas-content {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
 #totop {
   float: right;
   margin: 0;
