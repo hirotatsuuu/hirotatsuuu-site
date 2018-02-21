@@ -463,6 +463,8 @@ export default {
 }
 .uk-section {
   background-size: cover;
+  height: 800px;
+  width: 400px;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
