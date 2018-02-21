@@ -416,7 +416,7 @@
         </div>
       </div>
     </div>
-    <welcome-modal />
+    <!-- <welcome-modal /> -->
     <div class="uk-text-bottom">
       <a
         id="totop"
@@ -446,7 +446,7 @@ export default {
     }
   },
   mounted () {
-    UIkit.modal('#welcome-modal').show()
+    // UIkit.modal('#welcome-modal').show()
   }
 }
 </script>
