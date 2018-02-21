@@ -70,7 +70,7 @@
                 href="#bottom"
                 uk-scroll>BOTTOM</a></li>
             </ul>
-        </div>
+          </div>
         </div>
       </div>
     </div>
