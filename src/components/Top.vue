@@ -1,5 +1,6 @@
 <template>
   <div class="uk-offcanvas-content">
+    <!-- モバイルの場合 -->
     <div
       v-if="windowOuterWidth < 800"
       uk-sticky="
@@ -73,6 +74,7 @@
         </div>
       </div>
     </div>
+    <!-- PCの場合 -->
     <div
       v-else
       uk-sticky="
@@ -129,10 +131,6 @@
       <div
         class="uk-section uk-height-viewport uk-background-cover portrait1"
         id="home"
-        style="
-          background-position:center top;
-          background-repeat:no-repeat;
-          background-size:cover;"
       >
         <div class="uk-container">
           <div
@@ -152,10 +150,6 @@
       <div
         class="uk-section uk-height-viewport uk-background-cover portrait2"
         id="about"
-        style="
-          background-position:center top;
-          background-repeat:no-repeat;
-          background-size:cover;"
       >
         <div class="uk-container">
           <div
