@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   context: __dirname + '/src',
@@ -73,7 +74,12 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  plugins: [
+    new FaviconsWebpackPlugin({
+      logo: __dirname + '/src/images/favicon.png',
+    })
+  ],
 }
 
 if (process.env.NODE_ENV === 'production') {

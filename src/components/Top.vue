@@ -452,12 +452,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.uk-offcanvas-content {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-}
 #totop {
   float: right;
   margin: 0;
@@ -466,6 +460,9 @@ export default {
   right: 10vw;
   bottom: 10vh;
   color: white;
+}
+.uk-section {
+  background-size: cover;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
