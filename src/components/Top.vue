@@ -462,7 +462,7 @@ export default {
   color: white;
 }
 .uk-section {
-  background-size: cover;
+  background-size: 100px;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
