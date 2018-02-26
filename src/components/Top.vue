@@ -431,7 +431,6 @@
 </template>
 
 <script>
-import UIkit from 'uikit'
 import WelcomeModal from './WelcomeModal.vue'
 
 export default {
@@ -462,7 +461,8 @@ export default {
   color: white;
 }
 .uk-section {
-  background-size: 100px;
+  background-size: cover;
+  max-width: 100%;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
