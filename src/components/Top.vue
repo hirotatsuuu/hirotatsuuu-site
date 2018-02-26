@@ -1,5 +1,5 @@
 <template>
-  <div class="uk-offcanvas-content">
+  <div>
     <!-- モバイルの場合 -->
     <div
       v-if="windowOuterWidth < 800"
@@ -138,7 +138,7 @@
           >
             <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
               <h1 class="uk-heading-hero">
-                <span uk-parallax="opacity: 1,0; y: 0,-50; scale: 2,1; viewport: 0.2;">WELCOME TO HIROTATSU SITE_v1</span>
+                <span uk-parallax="opacity: 1,0; y: 0,-50; scale: 2,1; viewport: 0.2;">WELCOME TO HIROTATSU SITE</span>
               </h1>
             </div>
           </div>
@@ -463,6 +463,7 @@ export default {
 .uk-section {
   background-size: cover;
   max-width: 100%;
+  max-height: 100%;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
