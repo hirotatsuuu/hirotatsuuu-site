@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="uk-offcanvas-content">
-      <!-- モバイルの場合 -->
+      <!-- mobile -->
       <div
         v-if="windowOuterWidth < 800"
         uk-sticky="
@@ -48,6 +48,10 @@
               <ul class="uk-list uk-list-large">
                 <li><a
                   class="uk-logo"
+                  href="#home"
+                  uk-scroll>HOME</a></li>
+                <li><a
+                  class="uk-logo"
                   href="#about"
                   uk-scroll>ABOUT</a></li>
                 <li><a
@@ -75,7 +79,7 @@
           </div>
         </div>
       </div>
-      <!-- PCの場合 -->
+      <!-- PC -->
       <div
         v-else
         uk-sticky="
@@ -462,11 +466,6 @@ export default {
   right: 10vw;
   bottom: 10vh;
   color: white;
-}
-.uk-section {
-  background-size: cover;
-  max-width: 100%;
-  max-height: 100%;
 }
 .portrait1 {
   background-image: url("../images/portrait1.jpg");
