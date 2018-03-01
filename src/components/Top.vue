@@ -89,6 +89,7 @@
               <div>
                 <h4>
                   <a
+                    style="display: block;"
                     class="uk-logo"
                     href="#home"
                     uk-scroll
@@ -102,30 +103,37 @@
                 </h4>
                 <ul class="uk-list uk-list-large">
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#home"
                     uk-scroll>HOME</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#about"
                     uk-scroll>ABOUT</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#portfolio"
                     uk-scroll>PROTFOLIO</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#blog"
                     uk-scroll>BLOG</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#contact"
                     uk-scroll>CONTACT</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#sns"
                     uk-scroll>SNS</a></li>
                   <li><a
+                    style="display: block;"
                     class="uk-logo"
                     href="#bottom"
                     uk-scroll>BOTTOM</a></li>
