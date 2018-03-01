@@ -14,6 +14,12 @@ hirotatsu-site
 npm i -g yarn
 ```
 
+- `firebase-tools`のインストール
+
+```
+npm i -g firebase-tools
+```
+
 
 ## Setup
 - `node`のパッケージのインストール
@@ -34,4 +40,10 @@ yarn dev
 
 ```
 yarn build
+```
+
+- `dist`ディレクトリを公開する
+
+```
+yarn deploy
 ```
