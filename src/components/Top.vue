@@ -1,137 +1,141 @@
 <template>
   <div>
     <div class="uk-offcanvas-content">
-      <!-- mobile -->
-      <div
-        v-if="windowOuterWidth < 800"
-        uk-sticky="
-          sel-target: .uk-navbar-container;
-          cls-active: uk-navbar-sticky;
-          bottom: #transparent-sticky-navbar;"
-      >
-        <nav
-          class="uk-navbar-container"
-          uk-navbar
-        >
-          <div
-            class="uk-navbar-left"
-            style="position: fixed; z-index: 980;"
-          >
-            <a
-              class="uk-navbar-toggle"
-              href="#"
-              uk-toggle="target: #mobile-menu"
-            >
-              <span uk-navbar-toggle-icon />
-            </a>
-          </div>
-        </nav>
+      <!-- PC start -->
+      <div v-if="deviceFlag">
         <div
-          id="mobile-menu"
-          uk-offcanvas="overlay: true;"
+          uk-sticky="
+            sel-target: .uk-navbar-container;
+            cls-active: uk-navbar-sticky;
+            bottom: #transparent-sticky-navbar;"
         >
-          <div class="uk-offcanvas-bar">
-            <div>
-              <h4>
-                <a
-                  class="uk-logo"
-                  href="#home"
-                  uk-scroll
+          <nav
+            class="uk-navbar-container uk-navbar-transparent"
+            uk-navbar
+          >
+            <div
+              class="uk-navbar-center"
+              style="position: fixed; z-index: 980;"
+            >
+              <a
+                class="uk-navbar-item uk-logo"
+                href="#home"
+                uk-scroll
+              >
+                <img
+                  src="../images/logo.png"
+                  alt="logo"
+                  style="width: 100px; height: 20px;"
                 >
-                  <img
-                    src="../images/logo.png"
-                    alt="logo"
-                    style="width: 150px; height: 30px;"
-                  >
-                </a>
-              </h4>
-              <ul class="uk-list uk-list-large">
+              </a>
+              <ul class="uk-navbar-nav">
                 <li><a
-                  class="uk-logo"
                   href="#home"
-                  uk-scroll>HOME</a></li>
+                  uk-scroll>home</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#about"
-                  uk-scroll>ABOUT</a></li>
+                  uk-scroll>about</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#portfolio"
-                  uk-scroll>PROTFOLIO</a></li>
+                  uk-scroll>portfolio</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#blog"
-                  uk-scroll>BLOG</a></li>
+                  uk-scroll>blog</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#contact"
-                  uk-scroll>CONTACT</a></li>
+                  uk-scroll>contact</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#sns"
-                  uk-scroll>SNS</a></li>
+                  uk-scroll>sns</a></li>
                 <li><a
-                  class="uk-logo"
                   href="#bottom"
-                  uk-scroll>BOTTOM</a></li>
+                  uk-scroll>bottom</a></li>
               </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- PC fin -->
+      <!-- mobile start -->
+      <div v-else>
+        <div
+          uk-sticky="
+            sel-target: .uk-navbar-container;
+            cls-active: uk-navbar-sticky;
+            bottom: #transparent-sticky-navbar;"
+        >
+          <nav
+            class="uk-navbar-container"
+            uk-navbar
+          >
+            <div
+              class="uk-navbar-left"
+              style="position: fixed; z-index: 980;"
+            >
+              <a
+                class="uk-navbar-toggle"
+                href="#"
+                uk-toggle="target: #mobile-menu"
+              >
+                <span uk-navbar-toggle-icon />
+              </a>
+            </div>
+          </nav>
+          <div
+            id="mobile-menu"
+            uk-offcanvas="overlay: true;"
+          >
+            <div class="uk-offcanvas-bar">
+              <div>
+                <h4>
+                  <a
+                    class="uk-logo"
+                    href="#home"
+                    uk-scroll
+                  >
+                    <img
+                      src="../images/logo.png"
+                      alt="logo"
+                      style="width: 150px; height: 30px;"
+                    >
+                  </a>
+                </h4>
+                <ul class="uk-list uk-list-large">
+                  <li><a
+                    class="uk-logo"
+                    href="#home"
+                    uk-scroll>HOME</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#about"
+                    uk-scroll>ABOUT</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#portfolio"
+                    uk-scroll>PROTFOLIO</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#blog"
+                    uk-scroll>BLOG</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#contact"
+                    uk-scroll>CONTACT</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#sns"
+                    uk-scroll>SNS</a></li>
+                  <li><a
+                    class="uk-logo"
+                    href="#bottom"
+                    uk-scroll>BOTTOM</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- PC -->
-      <div
-        v-else
-        uk-sticky="
-          sel-target: .uk-navbar-container;
-          cls-active: uk-navbar-sticky;
-          bottom: #transparent-sticky-navbar;"
-      >
-        <nav
-          class="uk-navbar-container uk-navbar-transparent"
-          uk-navbar
-        >
-          <div
-            class="uk-navbar-center"
-            style="position: fixed; z-index: 980;"
-          >
-            <a
-              class="uk-navbar-item uk-logo"
-              href="#home"
-              uk-scroll
-            >
-              <img
-                src="../images/logo.png"
-                alt="logo"
-                style="width: 100px; height: 20px;"
-              >
-            </a>
-            <ul class="uk-navbar-nav">
-              <li><a
-                href="#home"
-                uk-scroll>home</a></li>
-              <li><a
-                href="#about"
-                uk-scroll>about</a></li>
-              <li><a
-                href="#portfolio"
-                uk-scroll>portfolio</a></li>
-              <li><a
-                href="#blog"
-                uk-scroll>blog</a></li>
-              <li><a
-                href="#contact"
-                uk-scroll>contact</a></li>
-              <li><a
-                href="#sns"
-                uk-scroll>sns</a></li>
-              <li><a
-                href="#bottom"
-                uk-scroll>bottom</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <!-- mobile fin -->
       <div>
         <div
           class="uk-section uk-background-cover portrait1"
@@ -274,124 +278,220 @@
           id="sns"
         >
           <div class="uk-container">
-            <div class="uk-text-center">
-              <h1 uk-parallax="opacity: 0,1; y: -200,0; viewport: 0.5;">SNS</h1>
-              <div
-                class="uk-grid-small uk-child-width-expand@s uk-text-center"
-                uk-grid
-                uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.4;"
-              >
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://www.facebook.com/tatsuya.hirota.735"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-right">
-                      <h3 class="uk-card-title">Facebook</h3>
-                    </div>
-                  </a>
+            <!-- PC start -->
+            <div v-if="deviceFlag">
+              <div class="uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                <h1 uk-parallax="opacity: 0,1; y: -200,0; viewport: 0.5;">SNS</h1>
+                <div
+                  class="uk-grid-small uk-child-width-1-3@s"
+                  uk-grid
+                  uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.4;"
+                >
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://www.facebook.com/tatsuya.hirota.735"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-right">
+                        <h3 class="uk-card-title">Facebook</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://twitter.com/tatsuya_1208"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-bottom-medium">
+                        <h3 class="uk-card-title">Twitter</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://www.instagram.com/_hirotatsu_/"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-left">
+                        <h3 class="uk-card-title">Instagram</h3>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://twitter.com/tatsuya_1208"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-bottom-medium">
-                      <h3 class="uk-card-title">Twitter</h3>
-                    </div>
-                  </a>
+                <div
+                  class="uk-grid-small uk-child-width-1-3@s"
+                  uk-grid
+                  uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.3;"
+                >
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://github.com/hirotatsuya"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-right-medium">
+                        <h3 class="uk-card-title">GitHub</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://qiita.com/hirotatsuuu"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up">
+                        <h3 class="uk-card-title">Qiita</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="http://esekansai.ga"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-left-medium">
+                        <h3 class="uk-card-title">EKK</h3>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://www.instagram.com/_hirotatsu_/"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-left">
-                      <h3 class="uk-card-title">Instagram</h3>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="uk-grid-small uk-child-width-expand@s uk-text-center"
-                uk-grid
-              >
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://github.com/hirotatsuya"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-right-medium">
-                      <h3 class="uk-card-title">GitHub</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://qiita.com/hirotatsuuu"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up">
-                      <h3 class="uk-card-title">Qiita</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="http://esekansai.ga"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-left-medium">
-                      <h3 class="uk-card-title">EKK</h3>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="uk-grid-small uk-child-width-expand@s uk-text-center"
-                uk-grid
-              >
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://filmarks.com/users/h1208tatsuya"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-top-right">
-                      <h3 class="uk-card-title">Filmarks</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://www.wantedly.com/users/18194195"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-top-medium">
-                      <h3 class="uk-card-title">Wantedly</h3>
-                    </div>
-                  </a>
-                </div>
-                <div class="uk-animation-toggle">
-                  <a
-                    class="uk-link-reset"
-                    href="https://hirotatsuuu.sarahah.com"
-                    target="_blank"
-                  >
-                    <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-top-left">
-                      <h3 class="uk-card-title">sarahah</h3>
-                    </div>
-                  </a>
+                <div
+                  class="uk-grid-small uk-child-width-1-3@s"
+                  uk-grid
+                  uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.2;"
+                >
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://filmarks.com/users/h1208tatsuya"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-top-right">
+                        <h3 class="uk-card-title">Filmarks</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://www.wantedly.com/users/18194195"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-top-medium">
+                        <h3 class="uk-card-title">Wantedly</h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="uk-animation-toggle">
+                    <a
+                      class="uk-link-reset"
+                      href="https://hirotatsuuu.sarahah.com"
+                      target="_blank"
+                    >
+                      <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-top-left">
+                        <h3 class="uk-card-title">sarahah</h3>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- pc fin -->
+            <!-- mobile start -->
+            <div v-else>
+              <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top">
+                <div class="uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                  <h1 uk-parallax="opacity: 0,1; y: -200,0; viewport: 0.5;">SNS</h1>
+                  <div
+                    class="uk-grid-small uk-child-width-1-3"
+                    uk-grid
+                    uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.4;"
+                  >
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://www.facebook.com/tatsuya.hirota.735"
+                        target="_blank"
+                      >Facebook</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://twitter.com/tatsuya_1208"
+                        target="_blank"
+                      >Twitter</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://www.instagram.com/_hirotatsu_/"
+                        target="_blank"
+                      >Instagram</a>
+                    </div>
+                  </div>
+                  <div
+                    class="uk-grid-small uk-child-width-1-3"
+                    uk-grid
+                    uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.3;"
+                  >
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://github.com/hirotatsuya"
+                        target="_blank"
+                      >GitHub</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://qiita.com/hirotatsuuu"
+                        target="_blank"
+                      >Qiita</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="http://esekansai.ga"
+                        target="_blank"
+                      >EKK</a>
+                    </div>
+                  </div>
+                  <div
+                    class="uk-grid-small uk-child-width-1-3"
+                    uk-grid
+                    uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.2;"
+                  >
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://filmarks.com/users/h1208tatsuya"
+                        target="_blank"
+                      >Filmarks</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://www.wantedly.com/users/18194195"
+                        target="_blank"
+                      >Wantedly</a>
+                    </div>
+                    <div>
+                      <a
+                        class="uk-link-reset"
+                        href="https://hirotatsuuu.sarahah.com"
+                        target="_blank"
+                      >sarahah</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- mobile fin -->
           </div>
           <div class="uk-overlay uk-light">
             <p>This picture is at Tonlé Sap in Cambodia.</p>
@@ -422,7 +522,7 @@
           </div>
         </div>
       </div>
-      <!-- <welcome-modal /> -->
+      <welcome-modal />
       <div class="uk-text-bottom">
         <a
           id="totop"
@@ -438,6 +538,7 @@
 </template>
 
 <script>
+import UIkit from 'uikit'
 import WelcomeModal from './WelcomeModal.vue'
 
 export default {
@@ -448,11 +549,11 @@ export default {
   data () {
     return {
       message: '',
-      windowOuterWidth: window.outerWidth
+      deviceFlag: window.outerWidth > 800
     }
   },
   mounted () {
-    // UIkit.modal('#welcome-modal').show()
+    UIkit.modal('#welcome-modal').show()
   }
 }
 </script>
