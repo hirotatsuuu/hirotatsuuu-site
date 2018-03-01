@@ -448,22 +448,11 @@ export default {
   data () {
     return {
       message: '',
-      windowOuterWidth: window.outerWidth,
-      windowOuterHeight: window.outerHeight,
-      windowInnerWidth: window.innerWidth,
-      windowInnerHeight: window.innerHeight
+      windowOuterWidth: window.outerWidth
     }
   },
   mounted () {
     // UIkit.modal('#welcome-modal').show()
-    console.log('windowOuterWidth', this.windowOuterWidth)
-    console.log('windowOuterHeight', this.windowOuterHeight)
-    console.log('windowInnerWidth', this.windowInnerWidth)
-    console.log('windowInnerHeight', this.windowInnerHeight)
-    const list = document.getElementsByClassName('uk-section')
-    for (let i = 0; i < list.length; i++) {
-      list[i].setAttribute('style', 'width: ' + this.windowOuterWidth + ';' + 'height: ' + this.windowOuterHeight + ';')
-    }
   }
 }
 </script>
