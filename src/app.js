@@ -21,4 +21,3 @@ new Vue({
 })
 
 import './utils/console'
-import './main.css'

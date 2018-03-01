@@ -448,11 +448,18 @@ export default {
   data () {
     return {
       message: '',
-      windowOuterWidth: window.outerWidth
+      windowOuterWidth: window.outerWidth,
+      windowOuterHeight: window.outerHeight,
+      windowInnerWidth: window.innerWidth,
+      windowInnerHeight: window.innerHeight
     }
   },
   mounted () {
     // UIkit.modal('#welcome-modal').show()
+    console.log('windowOuterWidth', this.windowOuterWidth)
+    console.log('windowOuterHeight', this.windowOuterHeight)
+    console.log('windowInnerWidth', this.windowInnerWidth)
+    console.log('windowInnerHeight', this.windowInnerHeight)
   }
 }
 </script>
