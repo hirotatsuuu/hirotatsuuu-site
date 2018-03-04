@@ -213,6 +213,12 @@
                             uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
                           >CONTACT</a>
                         </li>
+                        <li>
+                          <a
+                            uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
+                            @click="gotoAbout()"
+                          >DETAIL</a>
+                        </li>
                       </ul>
                     </div>
                   </header>
@@ -526,28 +532,28 @@
           id="bottom"
         >
           <div class="uk-position-bottom uk-text-center uk-margin-small-bottom">
-            <span class="uk-text-muted">Copyright 2018 hirotatsuuu</span>
+            <span class="uk-text-muted">Copyright 2018 hirotatsu</span>
           </div>
         </div>
       </div>
-      <welcome-modal />
       <div class="uk-text-bottom">
         <a
           id="totop"
           href="#home"
           uk-scroll
-          uk-tooltip="totop"
         >
           <span uk-icon="icon: chevron-up; ratio: 2.0;" />
         </a>
       </div>
     </div>
+    <!-- <welcome-modal /> -->
   </div>
 </template>
 
 <script>
-import UIkit from 'uikit'
+// import UIkit from 'uikit'
 import WelcomeModal from './WelcomeModal.vue'
+import router from '../router'
 
 export default {
   name: 'Top',
@@ -561,7 +567,12 @@ export default {
     }
   },
   mounted () {
-    UIkit.modal('#welcome-modal').show()
+    // UIkit.modal('#welcome-modal').show()
+  },
+  methods: {
+    gotoAbout () {
+      router.push('/about')
+    }
   }
 }
 </script>
