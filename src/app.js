@@ -4,15 +4,8 @@ import 'uikit/dist/css/uikit.css'
 UIkit.use(Icons)
 
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { routes } from './utils/routes'
-Vue.use(VueRouter)
-
-export const router = new VueRouter({
-  routes
-})
-
 import App from './App.vue'
+import router from './router'
 
 new Vue({
   el: '#app',
