@@ -12,6 +12,9 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
   font-size: 100%;
+  background: black;
 }
 </style>
