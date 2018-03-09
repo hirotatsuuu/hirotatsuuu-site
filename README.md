@@ -5,7 +5,7 @@ hirotatsu-site
 - node 8.8.1
 - npm 5.4.2
 - yarn 1.2.1
-
+- firebase 3.17.4
 
 ## First
 - `yarn`のインストール

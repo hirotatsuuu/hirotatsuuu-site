@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="uk-offcanvas-content">
+    <div class="uk-offcanvas-content uk-animation-slide-left">
       <!-- PC start -->
       <div v-if="deviceFlag">
         <div
@@ -536,42 +536,30 @@
           </div>
         </div>
       </div>
-      <div class="uk-text-bottom">
-        <a
-          id="totop"
-          href="#home"
-          uk-scroll
-        >
-          <span uk-icon="icon: chevron-up; ratio: 2.0;" />
-        </a>
-      </div>
     </div>
-    <!-- <welcome-modal /> -->
+    <div class="uk-text-bottom">
+      <a
+        id="totop"
+        href="#home"
+        uk-scroll
+      >
+        <span uk-icon="icon: chevron-up; ratio: 2.0;" />
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-// import UIkit from 'uikit'
-import WelcomeModal from './WelcomeModal.vue'
-import router from '../router'
-
 export default {
   name: 'Top',
-  components: {
-    'welcome-modal': WelcomeModal
-  },
   data () {
     return {
-      message: '',
       deviceFlag: window.outerWidth > 800
     }
   },
-  mounted () {
-    // UIkit.modal('#welcome-modal').show()
-  },
   methods: {
     gotoAbout () {
-      router.push('/about')
+      this.$emit('gotoAbout')
     }
   }
 }

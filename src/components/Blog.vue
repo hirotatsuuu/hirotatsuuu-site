@@ -5,7 +5,7 @@
         <div class="uk-section uk-height-viewport uk-section-secondary uk-light">
           <div class="uk-container">
             <div class="uk-position-center uk-text-center uk-light">
-              <h1>About</h1>
+              <h1>Blog</h1>
               <button
                 class="uk-button uk-button-primary"
                 @click="gotoTop()"
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'Blog',
   methods: {
     gotoTop () {
       this.$emit('gotoTop')
