@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="uk-offcanvas-content uk-animation-slide-left">
+    <div class="uk-offcanvas-content">
       <!-- PC start -->
       <div v-if="deviceFlag">
         <div
@@ -280,6 +280,37 @@
               <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
                 <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Contact</h1>
                 <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Please send e-mail to hirotatsuuu@gmail.com</p>
+                <div uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.3;">
+                  <div class="uk-margin">
+                    <input
+                      class="uk-input uk-width-xlarge"
+                      type="text"
+                      placeholder="NAME"
+                      v-model="name"
+                    >
+                  </div>
+                  <div class="uk-margin">
+                    <input
+                      class="uk-input uk-width-xlarge"
+                      type="text"
+                      placeholder="EMAIL"
+                      v-model="email"
+                    >
+                  </div>
+                  <div class="uk-margin">
+                    <button
+                      class="uk-button uk-button-primary uk-width-xlarge"
+                      @click="send()"
+                    >SEND</button>
+                  </div>
+                  <div
+                    :class="sendClz"
+                    uk-alert
+                    v-show="isSend"
+                  >
+                    <p>{{ message }}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -550,16 +581,51 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Top',
   data () {
     return {
-      deviceFlag: window.outerWidth > 800
+      deviceFlag: window.outerWidth > 800,
+      name: '',
+      email: '',
+      isSend: false,
+      sendClz: {},
+      message: ''
     }
   },
   methods: {
     gotoAbout () {
       this.$emit('gotoAbout')
+    },
+    send () {
+      const { name, email } = this
+      if (!name || !email) {
+        this.isSend = true
+        this.sendClz = { 'uk-alert-danger': true }
+        this.message = 'SEND FAILED'
+      } else {
+        const url = 'https://hooks.slack.com/services/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'
+        const params = {
+          text: 'hirotatsu-site\'s contact\n' + name + '\n' + email
+        }
+        const headers = {
+          'Content-type': 'application/json'
+        }
+        axios.post(url, params, headers)
+          .then(res => {
+            this.isSend = true
+            this.sendClz = { 'uk-alert-success': true }
+            this.message = 'SEND SUCCESS'
+          })
+          .catch(err => {
+            console.log(err)
+            this.isSend = true
+            this.sendClz = { 'uk-alert-danger': true }
+            this.message = 'SEND FAILED'
+          })
+      }
     }
   }
 }
