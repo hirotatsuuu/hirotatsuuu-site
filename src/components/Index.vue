@@ -1,9 +1,15 @@
 <template>
   <div>
     <div v-if="isTop">
-      <top @gotoAbout="gotoAbout" />
+      <top
+        @gotoAbout="gotoAbout"
+        @gotoPortfolio="gotoPortfolio"
+      />
     </div>
     <div v-if="isAbout">
+      <about @gotoTop="gotoTop" />
+    </div>
+    <div v-if="isPortfolio">
       <about @gotoTop="gotoTop" />
     </div>
   </div>
@@ -13,22 +19,19 @@
 import Top from './Top.vue'
 import About from './About.vue'
 import Portfolio from './Portfolio.vue'
-import Blog from './Blog.vue'
 
 export default {
   name: 'Index',
   components: {
     Top,
     About,
-    Portfolio,
-    Blog
+    Portfolio
   },
   data () {
     return {
       isTop: true,
       isAbout: false,
-      isPortfolio: false,
-      isBlog: false
+      isPortfolio: false
     }
   },
   methods: {
@@ -36,19 +39,16 @@ export default {
       this.isTop = true
       this.isAbout = false
       this.isPortfolio = false
-      this.isBlog = false
     },
     gotoAbout () {
       this.isTop = false
       this.isAbout = true
       this.isPortfolio = false
-      this.isBlog = false
     },
     gotoPortfolio () {
-      this.$emit('gotoPortfolio')
-    },
-    gotoBlog () {
-      this.$emit('gotoBlog')
+      this.isTop = false
+      this.isAbout = false
+      this.isPortfolio = true
     }
   }
 }
