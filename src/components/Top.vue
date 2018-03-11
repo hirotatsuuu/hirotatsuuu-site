@@ -201,20 +201,6 @@
                       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
                         <li>
                           <a
-                            href="#sns"
-                            uk-scroll
-                            uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
-                          >SNS</a>
-                        </li>
-                        <li>
-                          <a
-                            href="#contact"
-                            uk-scroll
-                            uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
-                          >CONTACT</a>
-                        </li>
-                        <li>
-                          <a
                             uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
                             @click="gotoAbout()"
                           >DETAIL</a>
@@ -244,6 +230,13 @@
               <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
                 <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">PORTFOLIO</h1>
                 <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">The image in the background is a portfolio.</p>
+                <p>
+                  <button
+                    class="uk-button uk-button-primary"
+                    uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
+                    @click="gotoPortfolio()"
+                  >GO TO PORTFOLIO</button>
+                </p>
               </div>
             </div>
           </div>
@@ -261,7 +254,13 @@
             >
               <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
                 <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">BLOG</h1>
-                <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Coming soon.</p>
+                <p>
+                  <button
+                    class="uk-button uk-button-primary"
+                    uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
+                    @click="gotoBlog()"
+                  >GO TO BLOG</button>
+                </p>
               </div>
             </div>
           </div>
@@ -271,42 +270,82 @@
         </div>
         <div
           class="uk-section uk-height-viewport uk-background-cover portrait5"
-          id="contact"
+          id="blog"
         >
           <div class="uk-container">
             <div
               class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
             >
               <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Contact</h1>
-                <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Please send e-mail to hirotatsuuu@gmail.com</p>
+                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">STORE</h1>
+                <p>
+                  <button
+                    class="uk-button uk-button-primary"
+                    uk-parallax="opacity: 0,1; y: -50,0; scale: 2,1; viewport: 0.5;"
+                    @click="gotoStore()"
+                  >GO TO STORE</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="uk-overlay uk-light">
+            <p>This picture isGrand Canyon at Arizona in United States.</p>
+          </div>
+        </div>
+        <div
+          class="uk-section uk-height-viewport uk-background-cover portrait6"
+          id="contact"
+        >
+          <div class="uk-container">
+            <div
+              class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
+            >
+              <div class="uk-width-1-2@m uk-margin-auto uk-margin-auto-vertical">
+                <div class="uk-text-center">
+                  <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Contact</h1>
+                  <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Please send e-mail to hirotatsuuu@gmail.com</p>
+                </div>
                 <div uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.3;">
-                  <div class="uk-margin">
-                    <input
-                      class="uk-input uk-width-xlarge"
-                      type="text"
-                      placeholder="NAME"
-                      v-model="name"
-                    >
-                  </div>
-                  <div class="uk-margin">
-                    <input
-                      class="uk-input uk-width-xlarge"
-                      type="text"
-                      placeholder="EMAIL"
-                      v-model="email"
-                    >
+                  <div class="uk-form-stacked">
+                    <div class="uk-margin">
+                      <label
+                        class="uk-form-label"
+                        for="form-stacked-text"
+                      >NAME</label>
+                      <div class="uk-form-controls">
+                        <input
+                          class="uk-input uk-width-xlarge"
+                          type="text"
+                          placeholder="NAME"
+                          v-model="name"
+                        >
+                      </div>
+                    </div>
+                    <div class="uk-margin">
+                      <label
+                        class="uk-form-label"
+                        for="form-stacked-text"
+                      >EMAIL</label>
+                      <div class="uk-form-controls">
+                        <input
+                          class="uk-input uk-width-xlarge"
+                          type="text"
+                          placeholder="EMAIL"
+                          v-model="email"
+                        >
+                      </div>
+                    </div>
                   </div>
                   <div class="uk-margin">
                     <button
-                      class="uk-button uk-button-primary uk-width-xlarge"
+                      class="uk-button uk-button-secondary uk-width-xlarge"
                       @click="send()"
                     >SEND</button>
                   </div>
                   <div
+                    v-show="isSend"
                     :class="sendClz"
                     uk-alert
-                    v-show="isSend"
                   >
                     <p>{{ message }}</p>
                   </div>
@@ -319,7 +358,7 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait6"
+          class="uk-section uk-height-viewport uk-background-cover portrait7"
           id="sns"
         >
           <div class="uk-container">
@@ -543,7 +582,7 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait7"
+          class="uk-section uk-height-viewport uk-background-cover portrait8"
         >
           <div class="uk-container">
             <div
@@ -598,6 +637,15 @@ export default {
   methods: {
     gotoAbout () {
       this.$emit('gotoAbout')
+    },
+    gotoPortfolio () {
+      // TODO: ポートレートの作成
+    },
+    gotoBlog () {
+      location.href = 'https://hirotatsuuu.hateblo.jp/'
+    },
+    gotoStore () {
+      location.href = 'https://hirotatsuuu.stores.jp/'
     },
     send () {
       const { name, email } = this
