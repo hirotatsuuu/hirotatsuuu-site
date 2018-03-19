@@ -105,7 +105,6 @@
       <a
         id="return"
         href="#"
-        
       >
         <span
           uk-icon="icon: chevron-left; ratio: 2.0;"
