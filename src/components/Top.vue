@@ -162,7 +162,7 @@
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Tonlé Sap in Cambodia.</p>
+            <p>Tonlé Sap, Cambodia (2017)</p>
           </div>
         </div>
         <div
@@ -209,14 +209,19 @@
                     </div>
                   </header>
                   <div class="uk-comment-body" >
-                    <p uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.4;">I'm hirotatsu. My birth is 19941208. I'm 23 years old. I'm engineer.</p>
+                    <p uk-parallax="opacity: 0,1; y: 50,0; scale: 0.5,1; viewport: 0.4;">
+                      I'm hirotatsu from Tokyo.
+                      I'm 23 years old.
+                      I work as an engineer.
+                      Nice to meet you.
+                    </p>
                   </div>
                 </article>
               </div>
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Nigata in Japan.</p>
+            <p>Nigata, Japan (2017)</p>
           </div>
         </div>
         <div
@@ -229,7 +234,6 @@
             >
               <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
                 <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">PORTFOLIO</h1>
-                <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">The image in the background is a portfolio.</p>
                 <p>
                   <button
                     class="uk-button uk-button-primary"
@@ -241,7 +245,7 @@
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Zadar in Croatia.</p>
+            <p>Zadar, Croatia (2017)</p>
           </div>
         </div>
         <div
@@ -265,7 +269,7 @@
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture isGrand Canyon at Arizona in United States.</p>
+            <p>Bern, Swiss (2017)</p>
           </div>
         </div>
         <div
@@ -289,7 +293,7 @@
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture isGrand Canyon at Arizona in United States.</p>
+            <p>Tonlé Sap, Cambodia (2017)</p>
           </div>
         </div>
         <div
@@ -354,7 +358,7 @@
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Tonlé Sap in Cambodia.</p>
+            <p>Tonlé Sap, Cambodia (2017)</p>
           </div>
         </div>
         <div
@@ -578,7 +582,7 @@
             <!-- mobile fin -->
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Tonlé Sap in Cambodia.</p>
+            <p>Zadar, Coratia (2017)</p>
           </div>
         </div>
         <div
@@ -589,12 +593,12 @@
               class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top"
             >
               <div class="uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Thank you for coming my site.</h1>
+                <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Thank you for visiting my site.</h1>
               </div>
             </div>
           </div>
           <div class="uk-overlay uk-light">
-            <p>This picture is at Zadar in Coratia.</p>
+            <p>Grand Canyon, United States (2017)</p>
           </div>
         </div>
         <div
@@ -639,7 +643,7 @@ export default {
       this.$emit('gotoAbout')
     },
     gotoPortfolio () {
-      // TODO: ポートレートの作成
+      this.$emit('gotoPortfolio')
     },
     gotoBlog () {
       location.href = 'https://hirotatsuuu.hateblo.jp/'
