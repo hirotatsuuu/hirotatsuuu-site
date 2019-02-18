@@ -146,9 +146,9 @@
       <!-- mobile fin -->
       <div>
         <div
+          id="home"
           class="uk-section uk-background-cover portrait1"
           uk-height-viewport
-          id="home"
         >
           <div class="uk-container">
             <div
@@ -166,8 +166,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait2"
           id="about"
+          class="uk-section uk-height-viewport uk-background-cover portrait2"
         >
           <div class="uk-container">
             <div
@@ -225,8 +225,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait3"
           id="portfolio"
+          class="uk-section uk-height-viewport uk-background-cover portrait3"
         >
           <div class="uk-container">
             <div
@@ -249,8 +249,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait4"
           id="blog"
+          class="uk-section uk-height-viewport uk-background-cover portrait4"
         >
           <div class="uk-container">
             <div
@@ -273,8 +273,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait5"
           id="blog"
+          class="uk-section uk-height-viewport uk-background-cover portrait5"
         >
           <div class="uk-container">
             <div
@@ -297,8 +297,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait6"
           id="contact"
+          class="uk-section uk-height-viewport uk-background-cover portrait6"
         >
           <div class="uk-container">
             <div
@@ -318,10 +318,10 @@
                       >NAME</label>
                       <div class="uk-form-controls">
                         <input
+                          v-model="name"
                           class="uk-input uk-width-xlarge"
                           type="text"
                           placeholder="NAME"
-                          v-model="name"
                         >
                       </div>
                     </div>
@@ -332,10 +332,10 @@
                       >EMAIL</label>
                       <div class="uk-form-controls">
                         <input
+                          v-model="email"
                           class="uk-input uk-width-xlarge"
                           type="text"
                           placeholder="EMAIL"
-                          v-model="email"
                         >
                       </div>
                     </div>
@@ -362,8 +362,8 @@
           </div>
         </div>
         <div
-          class="uk-section uk-height-viewport uk-background-cover portrait7"
           id="sns"
+          class="uk-section uk-height-viewport uk-background-cover portrait7"
         >
           <div class="uk-container">
             <!-- PC start -->
@@ -378,7 +378,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://www.facebook.com/tatsuya.hirota.735"
+                      href="https://www.facebook.com/"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-right">
@@ -389,7 +389,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://twitter.com/tatsuya_1208"
+                      href="https://www.twitter.com/"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-bottom-medium">
@@ -400,7 +400,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://www.instagram.com/_hirotatsu_/"
+                      href="https://www.instagram.com/"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-bottom-left">
@@ -417,7 +417,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://github.com/hirotatsuya"
+                      href="https://github.com/hirotatsuuu"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-right-medium">
@@ -456,7 +456,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://filmarks.com/users/h1208tatsuya"
+                      href="https://filmarks.com/"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-scale-up uk-transform-origin-top-right">
@@ -467,7 +467,7 @@
                   <div class="uk-animation-toggle">
                     <a
                       class="uk-link-reset"
-                      href="https://www.wantedly.com/users/18194195"
+                      href="https://www.wantedly.com/"
                       target="_blank"
                     >
                       <div class="uk-card uk-card-hover uk-card-body uk-animation-slide-top-medium">
@@ -602,8 +602,8 @@
           </div>
         </div>
         <div
-          class="uk-position-relative"
           id="bottom"
+          class="uk-position-relative"
         >
           <div class="uk-position-bottom uk-text-center uk-margin-small-bottom">
             <span class="uk-text-muted">Copyright 2018 hirotatsu</span>
